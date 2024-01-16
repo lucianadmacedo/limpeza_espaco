@@ -9,7 +9,7 @@ def delete_lines(file_pattern):
             lines = file.readlines()
 
         # Remove extra spaces
-        lines = [re.sub(r'\s+(?![a-z])|(?<=[^.])\s+', ' ', line) for line in lines]
+        lines = [re.sub(r'(\r|\n)(?![a-z])|(?<=[^.])(\r|\n)', ' ', line) for line in lines]
         # Remove extra spaces before period punctuations
         # lines = [re.sub(r'\s*\.', '.', line) for line in lines] 
 
