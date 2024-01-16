@@ -9,7 +9,7 @@ def delete_lines(file_pattern):
             lines = file.readlines()
 
         # Remove extra spaces
-        lines = [re.sub(r'\s+', ' ', line) for line in lines]
+        lines = [re.sub(r'\s+(?![a-z])|(?<=[^.])\s+', ' ', line) for line in lines]
         # Remove extra spaces before period punctuations
         # lines = [re.sub(r'\s*\.', '.', line) for line in lines] 
 
@@ -21,5 +21,5 @@ def delete_lines(file_pattern):
         print(f"Lines modified in {filepath}.")
 
 
-file_pattern = '/Users/lucianadiasdemacedo/Downloads/*.txt' 
+file_pattern = '/Users/lucianadiasdemacedo/Downloads/limpeza_espacos/limpeza_espaco/*.txt' 
 delete_lines(file_pattern)
