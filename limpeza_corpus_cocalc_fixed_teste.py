@@ -21,5 +21,5 @@ def delete_lines(file_pattern):
         print(f"Lines modified in {filepath}.")
 
 
-file_pattern = '/Users/lucianadiasdemacedo/Downloads/limpeza_espacos/limpeza_espaco/*.txt' 
+file_pattern = '/Users/lucianadiasdemacedo/Downloads/*.txt' 
 delete_lines(file_pattern)
