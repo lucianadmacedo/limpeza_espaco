@@ -11,7 +11,7 @@ def delete_lines(file_pattern):
             lines = file.read()
 
 
-        lines = re.sub('\n[a-z]', '', lines)
+        lines = re.sub('\n(?<=[a-z])', '', lines)
         lines = re.sub('\n:', ' : ', lines)
 
 #        lines = lines.split('\n')
