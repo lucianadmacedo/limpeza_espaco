@@ -12,6 +12,7 @@ def delete_lines(file_pattern):
 
 
         lines = re.sub('(?<=[a-z])\n(?=([A-Z][a-z]))', ' ', lines)
+        lines = re.sub('(?<=[a-z] )\n(?=([A-Z][a-z]))', ' ', lines)
         lines = re.sub('\n(?=[a-z])', '', lines)
         lines = re.sub('\n:', ' : ', lines)
 
